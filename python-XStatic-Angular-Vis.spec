@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        4.16.0.0
-Release:        0%{?dist}
+Release:        1%{?dist}
 Provides:       python2-XStatic-Angular-Vis = %{version}-%{release}
 Summary:        Angular-Vis (XStatic packaging standard)
 
@@ -58,5 +58,5 @@ rmdir %{buildroot}%{python2_sitelib}/xstatic/pkg/angular_vis/data/
 %{_jsdir}/angular_vis
 
 %changelog
-* Thu Jul 12 2018 Radomir Dopieralski <rdopiera@redhat.com) - 4.16.0.0-0
+* Thu Jul 12 2018 Radomir Dopieralski <rdopiera@redhat.com) - 4.16.0.0-1
 - Initial package

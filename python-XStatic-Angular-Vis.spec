@@ -15,13 +15,6 @@ URL:            https://github.com/visjs/angular-visjs
 Source0:        https://files.pythonhosted.org/packages/source/X/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python2-devel
-BuildRequires:  python-setuptools
-
-Requires:       python-XStatic
-Requires:       xstatic-angular-vis-common
-
-
 %description
 Angular-Vis JavaScript library packaged for setup-tools (easy_install) / pip.
 
@@ -46,6 +39,28 @@ It intentionally does not provide any extra code except some metadata
 nor has any extra requirements.
 
 This package contains the JavaScript files.
+
+
+%package -n python2-%{pypi_name}
+Summary:        %{summary}
+
+BuildRequires:  python2-devel
+BuildRequires:  python2-setuptools
+
+Requires:       python2-XStatic
+Requires:       xstatic-angular-vis-common
+
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
+%description -n python2-%{pypi_name}
+Angular-Vis JavaScript library packaged for setup-tools (easy_install) / pip.
+
+This package is intended to be used by any project that needs these files.
+
+It intentionally does not provide any extra code except some metadata
+nor has any extra requirements.
+
+This package provides Python 2 build of %{pypi_name}.
 
 
 %if 0%{?with_python3}
@@ -101,7 +116,7 @@ rm -rf %{buildroot}%{python3_sitelib}/xstatic/pkg/angular_uuid/data/
 %endif
 
 
-%files -n python-%{pypi_name}
+%files -n python2-%{pypi_name}
 %doc README.txt
 %{python2_sitelib}/xstatic/pkg/angular_vis
 %{python2_sitelib}/XStatic_Angular_Vis-%{version}-py%{python_version}.egg-info

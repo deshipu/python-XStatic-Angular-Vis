@@ -7,7 +7,6 @@
 Name:           python-%{pypi_name}
 Version:        4.16.0.0
 Release:        1%{?dist}
-Provides:       python2-XStatic-Angular-Vis = %{version}-%{release}
 Summary:        Angular-Vis (XStatic packaging standard)
 
 License:        MIT
